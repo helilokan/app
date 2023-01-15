@@ -35,7 +35,8 @@ class AcGameMenu{
     add_listening_events(){
         let outer = this;
         this.$single_mode.click(function(){
-            
+            outer.hide();
+            outer.root.playground.show();
         });
         this.$multi_mode.click(function(){
 
@@ -43,5 +44,11 @@ class AcGameMenu{
         this.$settings.click(function(){
 
         });
-
+    }
+    show(){
+        this.$menu.show();
+    }
+    hide(){
+        this.$menu.hide();
+    }
 }
